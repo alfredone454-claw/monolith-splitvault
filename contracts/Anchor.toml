@@ -3,9 +3,7 @@ seeds = false
 skip-lint = false
 
 [programs.localnet]
-group_manager = "GmMgr11111111111111111111111111111111111111"
-expense_splitter = "ExpSpl111111111111111111111111111111111111"
-settlement_engine = "SetEng111111111111111111111111111111111111"
+# Program IDs will be auto-generated on first build
 
 [registry]
 url = "https://api.apr.dev"
