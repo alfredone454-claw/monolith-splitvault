@@ -1,9 +1,6 @@
 use anchor_lang::prelude::*;
 
-// Import the Group struct from group_manager
-use anchor_lang::solana_program::pubkey::Pubkey;
-
-declare_id!("ExpSpl111111111111111111111111111111111111");
+declare_id!("3Jr6HyXcZecfZhNpP4r8ZaQerPuvpk5Qzkx4cgdX2VEE");
 
 #[program]
 pub mod expense_splitter {
@@ -15,7 +12,7 @@ pub mod expense_splitter {
         description: String,
         total_amount: u64,
         split_type: SplitType,
-        split_values: Option<Vec<u64>>, // For custom split: percentages or amounts
+        split_values: Option<Vec<u64>>,
     ) -> Result<()> {
         let expense = &mut ctx.accounts.expense;
         let group = &ctx.accounts.group;
@@ -25,15 +22,14 @@ pub mod expense_splitter {
             group.members.contains(&ctx.accounts.payer.key()),
             SplitVaultError::NotGroupMember
         );
-        
-        // Calculate splits based on type
+
         let splits = calculate_splits(
             total_amount,
             &group.members,
             split_type,
             split_values.clone(),
         )?;
-        
+
         expense.creator = ctx.accounts.payer.key();
         expense.group = ctx.accounts.group.key();
         expense.description = description;
@@ -51,7 +47,6 @@ pub mod expense_splitter {
     /// Mark expense as settled
     pub fn settle_expense(ctx: Context<SettleExpense>) -> Result<()> {
         let expense = &mut ctx.accounts.expense;
-        
         require!(
             expense.creator == ctx.accounts.creator.key(),
             SplitVaultError::Unauthorized
@@ -75,16 +70,16 @@ fn calculate_splits(
     match split_type {
         SplitType::Equal => {
             let member_count = members.len() as u64;
+            require!(member_count > 0, SplitVaultError::NoMembers);
             let amount_per_member = total / member_count;
             let remainder = total % member_count;
             
             for (i, member) in members.iter().enumerate() {
                 let amount = if i == 0 {
-                    amount_per_member + remainder // First member gets remainder
+                    amount_per_member + remainder
                 } else {
                     amount_per_member
                 };
-                
                 splits.push(Split {
                     member: *member,
                     amount,
@@ -100,7 +95,6 @@ fn calculate_splits(
                 for (i, member) in members.iter().enumerate() {
                     let percentage = percentages.get(i).copied().unwrap_or(0);
                     let amount = (total * percentage) / 100;
-                    
                     splits.push(Split {
                         member: *member,
                         amount,
@@ -118,7 +112,6 @@ fn calculate_splits(
                 
                 for (i, member) in members.iter().enumerate() {
                     let amount = amounts.get(i).copied().unwrap_or(0);
-                    
                     splits.push(Split {
                         member: *member,
                         amount,
@@ -130,8 +123,17 @@ fn calculate_splits(
             }
         }
     }
-    
     Ok(splits)
+}
+
+// Group struct imported from group_manager
+#[account]
+pub struct Group {
+    pub creator: Pubkey,
+    pub name: String,
+    pub members: Vec<Pubkey>,
+    pub created_at: i64,
+    pub active: bool,
 }
 
 #[derive(Accounts)]
@@ -142,8 +144,8 @@ pub struct CreateExpense<'info> {
         space = 8 + Expense::MAX_SIZE
     )]
     pub expense: Account<'info, Expense>,
-    /// CHECK: Group account from group_manager program
-    pub group: AccountInfo<'info>,
+    #[account()]
+    pub group: Account<'info, Group>,
     #[account(mut)]
     pub payer: Signer<'info>,
     pub system_program: Program<'info, System>,
@@ -163,29 +165,29 @@ pub struct Expense {
     pub description: String,
     pub total_amount: u64,
     pub split_type: SplitType,
-    pub split_values: Vec<u64>,        // Percentages or exact amounts
-    pub splits: Vec<Split>,             // Final calculated splits
+    pub split_values: Vec<u64>,
+    pub splits: Vec<Split>,
     pub created_at: i64,
     pub settled: bool,
 }
 
 impl Expense {
-    pub const MAX_SIZE: usize = 32 +       // creator
-        32 +                               // group
-        4 + 100 +                          // description (max 100 chars)
-        8 +                                // total_amount
-        1 +                                // split_type
-        4 + (8 * 50) +                     // split_values (max 50 values)
-        4 + (Split::SIZE * 50) +           // splits (max 50 splits)
-        8 +                                // created_at
-        1;                                  // settled
+    pub const MAX_SIZE: usize = 32 + // creator
+        32 + // group
+        4 + 100 + // description (max 100 chars)
+        8 + // total_amount
+        1 + // split_type
+        4 + (8 * 50) + // split_values (max 50 values)
+        4 + (Split::SIZE * 50) + // splits (max 50 splits)
+        8 + // created_at
+        1; // settled
 }
 
 #[derive(AnchorSerialize, AnchorDeserialize, Clone, Copy, Debug, PartialEq)]
 pub enum SplitType {
-    Equal,       // Split equally among all members
-    Percentage,  // Custom percentages
-    Exact,       // Custom exact amounts
+    Equal,
+    Percentage,
+    Exact,
 }
 
 #[derive(AnchorSerialize, AnchorDeserialize, Clone, Debug)]
@@ -196,7 +198,7 @@ pub struct Split {
 }
 
 impl Split {
-    pub const SIZE: usize = 32 + 8 + 1; // pubkey + amount + paid flag
+    pub const SIZE: usize = 32 + 8 + 1;
 }
 
 #[error_code]
@@ -215,4 +217,6 @@ pub enum SplitVaultError {
     InvalidPercentage,
     #[msg("Amount mismatch")]
     AmountMismatch,
+    #[msg("No members in group")]
+    NoMembers,
 }

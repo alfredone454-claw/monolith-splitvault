@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("GmMgr11111111111111111111111111111111111111");
+declare_id!("33LuG9n23n8GgmGWyLUy7y1PHmEjAK1XGW66gV5cDmjL");
 
 #[program]
 pub mod group_manager {
