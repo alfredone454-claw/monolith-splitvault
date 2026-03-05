@@ -276,12 +276,12 @@ class MockPublicKey {
   equals(other) { return this.key === other.key; }
 }
 
-// Override functions to work without real PublicKey
+// Use valid dummy base58 keys
 const members = [
-  new MockPublicKey('5yJx...ABC123'),
-  new MockPublicKey('5yJx...ABC124'),
-  new MockPublicKey('5yJx...ABC125'),
-  new MockPublicKey('5yJx...ABC126')
+  new PublicKey('33LuG9n23n8GgmGWyLUy7y1PHmEjAK1XGW66gV5cDmjL'),
+  new PublicKey('3Jr6HyXcZecfZhNpP4r8ZaQerPuvpk5Qzkx4cgdX2VEE'),
+  new PublicKey('35SeWG8aR3qyhWdZRdHCHE8Mpg5fV2RTi8nyYP2XP2Q4'),
+  new PublicKey('FHPwHe5NFte2VsPgp8onNWhcTHfPeUTqk1dFnpw3AoVH')
 ];
 
 // FLUSSO COMPLETO
