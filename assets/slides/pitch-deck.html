@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SplitVault - Pitch Deck</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: linear-gradient(135deg, #9945FF 0%, #14F195 100%); }
+    .slide { width: 1280px; height: 720px; margin: 40px auto; background: white; border-radius: 24px; padding: 60px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); display: flex; flex-direction: column; }
+    .slide h1 { font-size: 64px; color: #9945FF; margin-bottom: 20px; }
+    .slide h2 { font-size: 48px; color: #333; margin-bottom: 40px; }
+    .slide p { font-size: 32px; line-height: 1.6; color: #666; }
+    .tagline { font-size: 28px; color: #14F195; font-weight: 600; margin-top: 20px; }
+    .stats { display: flex; gap: 60px; margin-top: 40px; }
+    .stat { text-align: center; }
+    .stat-value { font-size: 72px; font-weight: bold; color: #9945FF; }
+    .stat-label { font-size: 24px; color: #666; }
+    .highlight { background: linear-gradient(90deg, #9945FF, #14F195); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    ul { list-style: none; margin-top: 40px; }
+    ul li { font-size: 28px; padding: 20px 0; border-bottom: 1px solid #eee; }
+    ul li:before { content: "✓"; color: #14F195; font-weight: bold; margin-right: 20px; }
+    .cta { background: linear-gradient(90deg, #9945FF, #14F195); color: white; padding: 30px 60px; border-radius: 16px; font-size: 32px; font-weight: bold; text-align: center; margin-top: auto; }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h1>💰 SplitVault</h1>
+    <p class="tagline">On-chain Expense Splitting for Friends & Groups</p>
+    <p style="margin-top: 40px;">SplitVault is a <span class="highlight">Solana-native mobile app</span> that allows groups of friends to split expenses transparently on the blockchain.</p>
+    <p style="margin-top: 20px;">Built for the <strong>Monolith Hackathon</strong> using the Solana Mobile Stack.</p>
+    <div class="cta">github.com/alfredone454-claw/monolith-splitvault</div>
+  </div>
+
+  <div class="slide">
+    <h2>🎯 The Problem</h2>
+    <p>Splitting bills with friends is broken:</p>
+    <ul>
+      <li>Venmo/PayPal require KYC & bank accounts</li>
+      <li>Unclear who owes what after group trips</li>
+      <li>Manual tracking via spreadsheets</li>
+      <li>Cross-border payments are expensive</li>
+      <li>No transparency in group finances</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h2>💡 Our Solution</h2>
+    <ul>
+      <li>Zero-gas on devnet (cheap on mainnet)</li>
+      <li>Wallet-to-wallet payments — no middlemen</li>
+      <li>On-chain transparency — full audit trail</li>
+      <li>Group management on Solana</li>
+      <li>Mobile-first with MWA integration</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h2>📊 Key Metrics</h2>
+    <div class="stats">
+      <div class="stat"><div class="stat-value">3</div><div class="stat-label">Smart Contracts</div></div>
+      <div class="stat"><div class="stat-value">4</div><div class="stat-label">Screens</div></div>
+      <div class="stat"><div class="stat-value">~50</div><div class="stat-label">ms Latency</div></div>
+      <div class="stat"><div class="stat-value">0</div><div class="stat-label">Gas (Devnet)</div></div>
+    </div>
+    <p style="margin-top: 60px;">Built with: React Native + Anchor + Solana Mobile Stack</p>
+  </div>
+
+  <div class="slide">
+    <h2>🚀 Demo Ready</h2>
+    <p>What's working now:</p>
+    <ul>
+      <li>Group creation & member management</li>
+      <li>Expense tracking with split calculations</li>
+      <li>Equal, percentage & exact split types</li>
+      <li>On-chain settlement via settlements</li>
+      <li>Mobile Wallet Adapter integration</li>
+    </ul>
+    <div class="cta">🎬 Video: DEMO_WALKTHROUGH.md</div>
+  </div>
+
+  <div class="slide">
+    <h2>🔮 Roadmap</h2>
+    <ul>
+      <li>Multi-token support (USDC, SOL, SPL)</li>
+      <li>Recurring expenses</li>
+      <li>Push notifications</li>
+      <li>App Store release</li>
+    </ul>
+    <div class="cta" style="background: #333; margin-top: 60px;">Thank you! Questions?</div>
+  </div>
+</body>
+</html>
