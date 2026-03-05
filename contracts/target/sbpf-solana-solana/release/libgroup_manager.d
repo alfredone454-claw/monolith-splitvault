@@ -1,0 +1,1 @@
+/home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/sbpf-solana-solana/release/libgroup_manager.rlib: /home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/programs/group_manager/src/lib.rs

@@ -1,0 +1,10 @@
+/home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/sbpf-solana-solana/release/deps/solana_frozen_abi-d43479e682ffc876.d: /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-frozen-abi-1.18.26/src/lib.rs /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-frozen-abi-1.18.26/src/abi_digester.rs /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-frozen-abi-1.18.26/src/abi_example.rs /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-frozen-abi-1.18.26/src/hash.rs
+
+/home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/sbpf-solana-solana/release/deps/libsolana_frozen_abi-d43479e682ffc876.rlib: /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-frozen-abi-1.18.26/src/lib.rs /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-frozen-abi-1.18.26/src/abi_digester.rs /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-frozen-abi-1.18.26/src/abi_example.rs /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-frozen-abi-1.18.26/src/hash.rs
+
+/home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/sbpf-solana-solana/release/deps/libsolana_frozen_abi-d43479e682ffc876.rmeta: /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-frozen-abi-1.18.26/src/lib.rs /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-frozen-abi-1.18.26/src/abi_digester.rs /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-frozen-abi-1.18.26/src/abi_example.rs /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-frozen-abi-1.18.26/src/hash.rs
+
+/home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-frozen-abi-1.18.26/src/lib.rs:
+/home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-frozen-abi-1.18.26/src/abi_digester.rs:
+/home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-frozen-abi-1.18.26/src/abi_example.rs:
+/home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-frozen-abi-1.18.26/src/hash.rs:

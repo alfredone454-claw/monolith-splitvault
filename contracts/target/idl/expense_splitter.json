@@ -1,0 +1,294 @@
+{
+  "address": "3Jr6HyXcZecfZhNpP4r8ZaQerPuvpk5Qzkx4cgdX2VEE",
+  "metadata": {
+    "name": "expense_splitter",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "create_expense",
+      "docs": [
+        "Create a new expense in a group"
+      ],
+      "discriminator": [
+        63,
+        19,
+        41,
+        230,
+        40,
+        213,
+        132,
+        147
+      ],
+      "accounts": [
+        {
+          "name": "expense",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "group"
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "name": "total_amount",
+          "type": "u64"
+        },
+        {
+          "name": "split_type",
+          "type": {
+            "defined": {
+              "name": "SplitType"
+            }
+          }
+        },
+        {
+          "name": "split_values",
+          "type": {
+            "option": {
+              "vec": "u64"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "settle_expense",
+      "docs": [
+        "Mark expense as settled"
+      ],
+      "discriminator": [
+        204,
+        176,
+        141,
+        254,
+        95,
+        142,
+        214,
+        181
+      ],
+      "accounts": [
+        {
+          "name": "expense",
+          "writable": true
+        },
+        {
+          "name": "creator",
+          "signer": true
+        }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Expense",
+      "discriminator": [
+        49,
+        167,
+        206,
+        160,
+        209,
+        254,
+        24,
+        100
+      ]
+    },
+    {
+      "name": "Group",
+      "discriminator": [
+        209,
+        249,
+        208,
+        63,
+        182,
+        89,
+        186,
+        254
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "Unauthorized",
+      "msg": "Unauthorized action"
+    },
+    {
+      "code": 6001,
+      "name": "GroupInactive",
+      "msg": "Group is not active"
+    },
+    {
+      "code": 6002,
+      "name": "NotGroupMember",
+      "msg": "Not a group member"
+    },
+    {
+      "code": 6003,
+      "name": "AlreadySettled",
+      "msg": "Expense already settled"
+    },
+    {
+      "code": 6004,
+      "name": "MissingSplitValues",
+      "msg": "Missing split values"
+    },
+    {
+      "code": 6005,
+      "name": "InvalidPercentage",
+      "msg": "Percentage total must be 100"
+    },
+    {
+      "code": 6006,
+      "name": "AmountMismatch",
+      "msg": "Amount mismatch"
+    },
+    {
+      "code": 6007,
+      "name": "NoMembers",
+      "msg": "No members in group"
+    }
+  ],
+  "types": [
+    {
+      "name": "Expense",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "creator",
+            "type": "pubkey"
+          },
+          {
+            "name": "group",
+            "type": "pubkey"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "total_amount",
+            "type": "u64"
+          },
+          {
+            "name": "split_type",
+            "type": {
+              "defined": {
+                "name": "SplitType"
+              }
+            }
+          },
+          {
+            "name": "split_values",
+            "type": {
+              "vec": "u64"
+            }
+          },
+          {
+            "name": "splits",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "Split"
+                }
+              }
+            }
+          },
+          {
+            "name": "created_at",
+            "type": "i64"
+          },
+          {
+            "name": "settled",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Group",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "creator",
+            "type": "pubkey"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "members",
+            "type": {
+              "vec": "pubkey"
+            }
+          },
+          {
+            "name": "created_at",
+            "type": "i64"
+          },
+          {
+            "name": "active",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Split",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "member",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "paid",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SplitType",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Equal"
+          },
+          {
+            "name": "Percentage"
+          },
+          {
+            "name": "Exact"
+          }
+        ]
+      }
+    }
+  ]
+}

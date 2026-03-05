@@ -1,0 +1,8 @@
+/home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/debug/deps/shlex-3e923d27cf47b9ad.d: /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/shlex-1.3.0/src/lib.rs /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/shlex-1.3.0/src/bytes.rs
+
+/home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/debug/deps/libshlex-3e923d27cf47b9ad.rlib: /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/shlex-1.3.0/src/lib.rs /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/shlex-1.3.0/src/bytes.rs
+
+/home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/debug/deps/libshlex-3e923d27cf47b9ad.rmeta: /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/shlex-1.3.0/src/lib.rs /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/shlex-1.3.0/src/bytes.rs
+
+/home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/shlex-1.3.0/src/lib.rs:
+/home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/shlex-1.3.0/src/bytes.rs:

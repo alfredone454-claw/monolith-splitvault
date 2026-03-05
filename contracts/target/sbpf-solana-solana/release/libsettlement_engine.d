@@ -1,0 +1,1 @@
+/home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/sbpf-solana-solana/release/libsettlement_engine.rlib: /home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/programs/settlement_engine/src/lib.rs

@@ -1,0 +1,5 @@
+/home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/debug/deps/anchor_attribute_access_control-ce060bed5972735d.d: /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anchor-attribute-access-control-0.30.1/src/lib.rs
+
+/home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/debug/deps/libanchor_attribute_access_control-ce060bed5972735d.so: /home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anchor-attribute-access-control-0.30.1/src/lib.rs
+
+/home/ubuntu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anchor-attribute-access-control-0.30.1/src/lib.rs:

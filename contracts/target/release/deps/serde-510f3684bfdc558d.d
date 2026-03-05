@@ -1,0 +1,14 @@
+/home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/release/deps/libserde-510f3684bfdc558d.rmeta: /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/lib.rs /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/integer128.rs /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/private/mod.rs /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/private/de.rs /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/private/ser.rs /home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/release/build/serde-1af20ec196b00ea1/out/private.rs
+
+/home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/release/deps/libserde-510f3684bfdc558d.rlib: /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/lib.rs /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/integer128.rs /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/private/mod.rs /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/private/de.rs /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/private/ser.rs /home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/release/build/serde-1af20ec196b00ea1/out/private.rs
+
+/home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/release/deps/serde-510f3684bfdc558d.d: /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/lib.rs /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/integer128.rs /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/private/mod.rs /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/private/de.rs /home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/private/ser.rs /home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/release/build/serde-1af20ec196b00ea1/out/private.rs
+
+/home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/lib.rs:
+/home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/integer128.rs:
+/home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/private/mod.rs:
+/home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/private/de.rs:
+/home/ubuntu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.228/src/private/ser.rs:
+/home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/release/build/serde-1af20ec196b00ea1/out/private.rs:
+
+# env-dep:OUT_DIR=/home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/release/build/serde-1af20ec196b00ea1/out

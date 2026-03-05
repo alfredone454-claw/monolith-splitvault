@@ -1,0 +1,1 @@
+/home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/target/sbpf-solana-solana/release/libexpense_splitter.rlib: /home/ubuntu/.openclaw/workspace/monolith-splitvault/contracts/programs/expense_splitter/src/lib.rs
