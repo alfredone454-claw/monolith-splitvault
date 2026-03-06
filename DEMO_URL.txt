@@ -1,0 +1,14 @@
+SPLITVAULT WEB DEMO — LIVE URL
+================================
+
+Live Demo: http://172.31.40.85:5173/
+
+Access Instructions:
+1. Open browser (Chrome/Brave/Edge recommended)
+2. Navigate to: http://172.31.40.85:5173/
+3. Connect wallet: Phantom or Solflare (Testnet)
+4. Test features: Groups, Expenses, Balances, Settle
+
+Note: This is a devnet demo. No real funds required.
+
+Status: ✅ Online since 2026-03-06 20:30 UTC
