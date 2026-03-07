@@ -1,14 +1,10 @@
-import { useState } from 'react'
-import { WalletAdapterNetwork } from '@solana/wallet-adapter-base'
+import { PhantomWalletAdapter } from '@solana/wallet-adapter-phantom'
+import { SolflareWalletAdapter } from '@solana/wallet-adapter-solflare'
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react'
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui'
-import { PhantomWalletAdapter, SolflareWalletAdapter } from '@solana/wallet-adapter-wallets'
-import { clusterApiUrl } from '@solana/web3.js'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
 import '@solana/wallet-adapter-react-ui/styles.css'
 import './App.css'
-
 import GroupScreen from './screens/GroupScreen'
 import ExpenseScreen from './screens/ExpenseScreen'
 import BalanceScreen from './screens/BalanceScreen'
@@ -16,8 +12,8 @@ import SettleScreen from './screens/SettleScreen'
 import Navbar from './components/Navbar'
 
 function App() {
-  const network = WalletAdapterNetwork.Testnet
-  const endpoint = clusterApiUrl(network)
+  // Using Cloudflare Tunnel for local validator RPC
+  const endpoint = 'https://user-3k9v1np.trycloudflare.com'
   const wallets = [new PhantomWalletAdapter(), new SolflareWalletAdapter()]
 
   return (
